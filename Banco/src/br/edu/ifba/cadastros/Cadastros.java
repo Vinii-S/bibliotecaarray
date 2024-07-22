@@ -1,5 +1,6 @@
 package br.edu.ifba.cadastros;
 
+
 public class Cadastros<T> {
 	
 	private Object[] contas = new Object[3];
@@ -91,11 +92,15 @@ public class Cadastros<T> {
 	
 	
 	public int size() {
-		return this.tamanho-1;
+		return this.tamanho;
 	}
 	
-	public T[] listar() {
-		return (T[]) this.contas;
+	public void listar() {
+		for (Object obj : contas) {
+			if (obj != null) {
+				System.out.println(obj.toString());
+			}
+		}
 	}
 	
 
